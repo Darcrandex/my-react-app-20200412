@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useCounter } from "@/stores/use-counter";
 import { apiGetTopics } from "@/apis/common";
 import { useQuery } from "react-query";
+import { Button } from "antd";
 
 const Home = () => {
   const { count, add, sub } = useCounter();
@@ -34,6 +35,9 @@ const Home = () => {
       <hr />
       <button onClick={refetch}>get topics</button>
       <p>length {topicRes.data.length}</p>
+
+      <hr />
+      <Button type="primary">Antd Btn</Button>
     </>
   );
 };
