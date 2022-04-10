@@ -7,6 +7,7 @@ import { ConfigProvider } from "antd";
 import zhCN from "antd/lib/locale/zh_CN";
 
 import App from "@/App";
+import "./index.less";
 
 const root = createRoot(document.getElementById("root"));
 const client = new QueryClient();

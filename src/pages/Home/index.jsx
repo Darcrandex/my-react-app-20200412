@@ -38,6 +38,11 @@ const Home = () => {
 
       <hr />
       <Button type="primary">Antd Btn</Button>
+
+      <hr />
+      <p className="m-2 p-2 text-lg text-blue-400 border rounded">
+        tailwind css
+      </p>
     </>
   );
 };
