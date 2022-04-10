@@ -4,18 +4,18 @@
  * @author darcrand
  */
 
-import { Link } from "react-router-dom";
-import { useCounter } from "@/stores/use-counter";
-import { apiGetTopics } from "@/apis/common";
-import { useQuery } from "react-query";
-import { Button } from "antd";
+import { Link } from 'react-router-dom'
+import { useCounter } from '@/stores/use-counter'
+import { apiGetTopics } from '@/apis/common'
+import { useQuery } from 'react-query'
+import { Button } from 'antd'
 
 const Home = () => {
-  const { count, add, sub } = useCounter();
+  const { count, add, sub } = useCounter()
 
-  const { data: topicRes, refetch } = useQuery("get/topics", apiGetTopics, {
+  const { data: topicRes, refetch } = useQuery('get/topics', apiGetTopics, {
     placeholderData: { data: [] },
-  });
+  })
 
   return (
     <>
@@ -44,7 +44,7 @@ const Home = () => {
         tailwind css
       </p>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
