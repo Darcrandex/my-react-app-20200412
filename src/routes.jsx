@@ -8,6 +8,7 @@ import Home from './pages/Home'
 const routeConfigs = [
   { path: '/', element: Home },
   { path: '/about', element: lazy(() => import('@/pages/About')) },
+  { path: '/recoil-demo', element: lazy(() => import('@/pages/RecoilDemo')) },
 ]
 
 /**

@@ -1,11 +1,14 @@
 import { useState, useMemo } from 'react'
-import { atom, useRecoilState } from 'recoil'
+import { atomFamily, useRecoilState } from 'recoil'
 import { sleep } from '@/utils'
 
-const stateAtom = atom({ key: 'counter', default: 0 })
+const stateAtomFn = atomFamily({ key: 'counter', default: 0 })
 
-export function useCounter() {
-  const [count, setCount] = useRecoilState(stateAtom)
+export function useCounterById(id) {
+  const state = stateAtomFn(id)
+  console.log('state', state)
+
+  const [count, setCount] = useRecoilState(state)
   const [loading, setLoading] = useState(false)
   const isMinus = useMemo(() => count < 0, [count])
 
